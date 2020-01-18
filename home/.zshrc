@@ -13,3 +13,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export PATH="$PATH:./node_modules/.bin"
+
+alias copy='xclip -sel clip'
+alias paste='xclip -o -sel clip'
+
+# For device-specific stuff
+if [ -f ~/.zshrc-extra ]; then
+    source ~/.zshrc-extra
+fi
