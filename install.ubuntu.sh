@@ -15,8 +15,9 @@ sudo apt install -y code
 # Oh My Zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# NVM
+# NVM and Node
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+nvm install v12
 
 # Cleanup
 sudo apt update -y 
