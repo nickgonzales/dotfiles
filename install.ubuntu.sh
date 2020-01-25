@@ -29,6 +29,10 @@ sudo chsh "$USER" -s /bin/zsh
 
 # NVM and Node
 download_and_run nvm.sh https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="$PATH:./node_modules/.bin"
 nvm install v12
 
 # Cleanup
