@@ -12,7 +12,8 @@ mkdir -p tmp
 
 download_and_run() {
     curl -fsSL -o tmp/$1 $2
-    sudo bash tmp/$1 
+    chmod +x tmp/$1
+    ./tmp/$1
 }
 
 # VS Code
