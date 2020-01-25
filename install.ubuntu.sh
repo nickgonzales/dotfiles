@@ -25,14 +25,14 @@ sudo apt install -y code
 
 # Oh My Zsh
 CHSH=no RUNZSH=no download_and_run oh-my-zsh.sh https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-chsh "$USER" -s /bin/zsh
+sudo chsh "$USER" -s /bin/zsh
 
 # NVM and Node
 download_and_run nvm.sh https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh
 nvm install v12
 
-python scripts/copy-dotfiles.py
-
 # Cleanup
 sudo apt upgrade -y
 sudo apt autoremove -y
+
+python3 scripts/copy-dotfiles.py
