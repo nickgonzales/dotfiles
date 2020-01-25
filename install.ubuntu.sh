@@ -28,6 +28,14 @@ sudo apt install -y code
 CHSH=no RUNZSH=no download_and_run oh-my-zsh.sh https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 sudo chsh "$USER" -s /bin/zsh
 
+# Powerline
+(
+    cd tmp
+    git clone git@github.com:powerline/fonts.git
+    cd fonts
+    ./install.sh
+)
+
 # NVM and Node
 download_and_run nvm.sh https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh
 export NVM_DIR="$HOME/.nvm"
