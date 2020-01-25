@@ -39,4 +39,6 @@ nvm install v12
 sudo apt upgrade -y
 sudo apt autoremove -y
 
+git config --global alias.dag "log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order"
+
 python3 scripts/copy-dotfiles.py
