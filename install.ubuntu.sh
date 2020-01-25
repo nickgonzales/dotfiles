@@ -31,6 +31,8 @@ chsh "$USER" -s /bin/zsh
 download_and_run nvm.sh https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh
 nvm install v12
 
+python scripts/copy-dotfiles.py
+
 # Cleanup
 sudo apt upgrade -y
 sudo apt autoremove -y
