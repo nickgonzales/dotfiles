@@ -1,0 +1,9 @@
+{
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true,
+    "editor.renderWhitespace": "all",
+    "terminal.integrated.fontFamily": "Ubuntu Mono derivative Powerline",
+    "window.zoomLevel": 5,
+    "explorer.confirmDelete": false,
+    "editor.minimap.enabled": false
+}
