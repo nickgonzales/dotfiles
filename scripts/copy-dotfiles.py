@@ -1,5 +1,7 @@
 import os
 import os.path as path
+import shutil
+
 
 repo_dir = path.realpath(path.join(__file__, '../..'))
 home_dir = os.environ['HOME']
@@ -19,4 +21,4 @@ for root, dirs, files in os.walk(home_src):
         elif path.isfile(dst_file_path):
             os.remove(dst_file_path)
         
-        os.symlink(src_file_path, dst_file_path)
+        shutil.copyfile(src_file_path, dst_file_path)
