@@ -44,6 +44,9 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$PATH:./node_modules/.bin"
 nvm install v12
 
+# IntelliJ
+sudo snap install intellij-idea-community --classic
+
 # Cleanup
 sudo apt upgrade -y
 sudo apt autoremove -y
