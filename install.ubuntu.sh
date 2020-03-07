@@ -23,6 +23,8 @@ sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microso
 sudo apt install -y apt-transport-https
 sudo apt update -y
 sudo apt install -y code
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
 
 # Oh My Zsh
 CHSH=no RUNZSH=no download_and_run oh-my-zsh.sh https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh
