@@ -8,6 +8,7 @@ export DEFAULT_USER=$USER
 eval $(dircolors ~/.dircolors)
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export LESS="-XRF"
+eval $(lesspipe)
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -16,8 +17,3 @@ export PATH="$PATH:./node_modules/.bin"
 
 alias copy='xclip -sel clip'
 alias paste='xclip -o -sel clip'
-
-# For device-specific stuff
-if [ -f ~/.zshrc-extra ]; then
-    source ~/.zshrc-extra
-fi
