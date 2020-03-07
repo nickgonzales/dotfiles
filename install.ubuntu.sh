@@ -8,13 +8,14 @@ sudo apt install -y \
     openjdk-11-jdk \
     xclip
 
+# Setup for this script
 mkdir -p tmp
-
 download_and_run() {
     curl -fsSL -o tmp/$1 $2
     chmod +x tmp/$1
     ./tmp/$1
 }
+export PYTHONPATH="$(dirname "$0")/lib"
 
 # VS Code
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > tmp/packages.microsoft.gpg
@@ -56,3 +57,4 @@ sudo apt autoremove -y
 git config --global alias.dag "log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order"
 
 python3 scripts/copy-dotfiles.py
+python3 scripts/setup-firefox.py
